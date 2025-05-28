@@ -36,7 +36,7 @@ A curated coffee experience website that dynamically renders content and metadat
 
 ## 📫 Let's Connect
 
-- 🌍 [Portfolio Website](https://shreekarakanchi.github.io/Portfolio/)
+- 🌍 [Portfolio Website](https://shreenivas-k-portfolio.netlify.app/)
 - 💼 [LinkedIn](https://www.linkedin.com/in/shreenivas-karakanchi/)
 - 📧 Email: shreekarakanchi@gmail.com
 
