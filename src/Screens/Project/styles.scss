@@ -1,0 +1,177 @@
+@import "../../theme.scss";
+
+.project-screen {
+    background-color: $bgcolor;
+    display: flex;
+    margin: auto;
+    background-color: white;
+
+    .project-screen-wrapper {
+        margin: auto;
+        max-width: 800px;
+        padding: 80px 0px;
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+
+        .title {
+            color: black !important;
+        }
+
+        .project-list {
+            display: grid;
+            gap: 30px;
+
+            .project-card {
+                border-radius: 10px;
+                color: white;
+                display: grid;
+                grid-template-columns: auto 2fr;
+                gap: 20px;
+                padding: 20px;
+                overflow: hidden;
+                background-color: #1e1e1e;
+                border: 1px solid #3ccf92;
+
+                img {
+                    height: 130px;
+                    aspect-ratio: 16/10;
+                    border-radius: 4px;
+                    border: 2px solid white;
+                }
+
+                .project-detail {
+                    display: flex;
+                    flex-direction: column;
+
+                    .name {
+                        font-size: 20px;
+                        margin-bottom: 8px;
+                        color: #3ccf91;
+                        font-weight: 500;
+                    }
+
+                    .desc {
+                        font-weight: 300;
+                        font-size: 16px;
+                        line-height: 1.5;
+                        letter-spacing: 0.6px;
+                    }
+
+                    .techs {
+                        display: flex;
+                        gap: 6px;
+                        column-gap: 6px;
+                        flex-wrap: wrap;
+                        margin-top: 20px;
+
+                        .tech {
+                            display: flex;
+                            align-items: center;
+                            padding: 5px 10px;
+                            background-color: #3b3b3b;
+                            border-radius: 20px;
+                            color: #ffffff;
+                            font-size: 13px;
+                            transition: background-color 0.1s;
+                            letter-spacing: 0.6px;
+
+                            &:hover {
+                                background-color: #3ccf92;
+                            }
+
+                            &:hover .dot {
+                                background-color: white;
+                            }
+
+                            .dot {
+                                height: 8px;
+                                width: 8px;
+                                background-color: #3ccf91;
+                                border-radius: 50%;
+                                margin-right: 8px;
+                            }
+                        }
+                    }
+
+                    .options {
+                        margin-top: 20px;
+                        display: flex;
+                        gap: 20px;
+                        color: rgb(182, 182, 182);
+                        letter-spacing: 1px;
+                        font-size: 14px;
+                        justify-content: flex-end;
+
+                        .live,
+                        .git {
+                            display: flex;
+                            justify-self: center;
+                            gap: 5px;
+                            align-items: center;
+                            padding: 4px 6px;
+                            border-radius: 30px;
+
+                            &:hover {
+                                background-color: black;
+                                background-color: #3b3b3b;
+                                cursor: pointer;
+                            }
+                        }
+                        a{
+                            text-decoration: none;
+                            color: rgb(182, 182, 182);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .project-screen {
+        .project-screen-wrapper {
+            padding: 70px 15px;
+            gap: 20px;
+
+            .title {
+                font-size: 24px;
+            }
+
+            .project-list {
+                display: grid;
+                grid-template-columns: 1fr;
+
+                .project-card {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 20px;
+
+                    img {
+                        height: auto;
+                        height: auto;
+                    }
+
+                    .project-detail {
+
+                        .name {
+                            font-size: 18px;
+                        }
+
+                        .desc {
+                            font-size: 14px;
+                        }
+
+                        .techs {
+                            .tech {
+                                font-size: 12px;
+                                padding: 4px 8px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

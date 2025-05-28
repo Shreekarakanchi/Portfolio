@@ -1,0 +1,110 @@
+@import "../../theme.scss";
+
+.tech-screen {
+    background-color: #121212;
+    color: #e0e0e0;
+    // padding: 60px 20px;
+    display: flex;
+    justify-content: center;
+    // height: 100vh;
+
+    .tech-screen-wrapper {
+        max-width: 800px;
+        // margin: auto;
+        padding: 80px 0px;
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+
+        .title {
+            font-size: 28px;
+            font-weight: 700;
+            color: white;
+        }
+
+        .tech-cards {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+
+            .wrapper {
+                background-color: #1e1e1e;
+                border: 1px solid #3ccf92;
+                border-radius: 10px;
+                padding: 20px;
+                transition: transform 0.2s;
+
+                .tech-title {
+                    font-size: 20px;
+                    margin-bottom: 15px;
+                    color: #3ccf91;
+                }
+
+                .each-tech-type {
+                    .tech-type-wrapper {
+                        display: flex;
+                        flex-wrap: wrap;
+                        gap: 8px;
+
+                        .tech-detail {
+                            display: flex;
+                            align-items: center;
+                            padding: 5px 10px;
+                            background-color: #3b3b3b;
+                            border-radius: 20px;
+                            color: #ffffff;
+                            font-size: 14px;
+                            transition: background-color 0.1s;
+                            letter-spacing: 0.6px;
+
+                            &:hover {
+                                background-color: #3ccf92;
+                            }
+
+                            &:hover .dot {
+                                background-color: white;
+                            }
+
+                            .dot {
+                                height: 8px;
+                                width: 8px;
+                                background-color: #3ccf91;
+                                border-radius: 50%;
+                                margin-right: 8px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .tech-screen {
+        height: auto;
+        padding: 70px 15px;
+
+        .tech-screen-wrapper {
+            padding: 0px;
+            gap: 20px;
+
+            .title {
+                font-size: 24px;
+            }
+
+            .tech-cards {
+                .wrapper {
+                    .tech-title {
+                        font-size: 18px;
+                    }
+
+                    .each-tech-type .tech-type-wrapper .tech-detail {
+                        font-size: 13px;
+                        padding: 4px 8px;
+                    }
+                }
+            }
+        }
+    }
+}
